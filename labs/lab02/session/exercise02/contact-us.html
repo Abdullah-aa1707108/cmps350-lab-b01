@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+</head>
+<body>
+<header>
+  <h1>Contact Us</h1>
+  <p>We will get back to you ...</p>
+</header>
+<main>
+<form action="./backend-handler.html" method="post">
+  <fieldset>
+    <legend>Fill this form</legend>
+
+    <label for="full-name">Full name</label>
+    <input id="full-name" name="full-name" type="text" placeholder="enter your full name" required />
+    <br />
+
+    <label for="phone-number">Phone number</label>
+    <input id="phone-number"
+           name="phone-number"
+           type="tel"
+           placeholder="+974-###-##-###"
+           pattern="\+974-[0-9]{3}-[0-9]{2}-[0-9]{3}"
+           required />
+    <br />
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="your-email@example.co" required />
+    <br />
+
+    <label for="gender">Gender</label>
+    <span id="gender">
+      <input id="male" name="gender" type="radio" value="male" checked />
+      <label for="male">Male</label>
+      <input id="female" name="gender" type="radio" value="female" />
+      <label for="female">Female</label>
+    </span>
+    <br />
+
+    <label for="birth-date">Date of Birth</label>
+    <input id="birth-date" name="birth-date" type="date" required />
+    <br />
+
+    <label for="contact-method">Preferred Method of Contact</label>
+    <div id="contact-method" style="display: inline;">
+      <input id="contact-phone" name="contact-method" type="checkbox" checked />
+      <label for="contact-phone">Phone</label>
+      <input id="contact-email" name="contact-method" type="checkbox" />
+      <label for="contact-email">Email</label>
+    </div>
+    <br />
+
+    <label for="rating">How do you rate our website?</label>
+    <select id="rating" name="rating">
+      <option value="Excellent">Excellent</option>
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <br />
+
+    <label for="message">Message</label><br />
+    <textarea id="message"
+              name="message"
+              placeholder="Leave your message"
+              rows="10"
+              cols="66"
+              required></textarea>
+    <br />
+
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Reset" />
+  </fieldset>
+</form>
+</main>
+<footer></footer>
+</body>
+</html>

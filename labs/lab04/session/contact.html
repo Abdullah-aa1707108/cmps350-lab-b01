@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+    <style>
+        form {
+            display: grid;
+        }
+
+        @media (min-width: 600px) {
+            form {
+                grid-template: auto / minmax(100px, 20%) 1fr;
+            }
+        }
+        .modal {
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            place-items: center;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .warning {
+            border: solid 1px black;
+            height: 100px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="">
+    <label for="firstName">First Name</label>
+    <input id="firstName" type="text">
+
+    <label for="lastName">Last Name</label>
+    <input id="lastName" type="text">
+
+    <label for="job">Job</label>
+    <input id="job" type="text">
+
+    <label for="age">Age</label>
+    <input id="age" type="text">
+
+    <label for="email">Email</label>
+    <input id="email" type="email">
+
+    <button>Submit</button>
+</form>
+<div class="modal">
+    <div class="warning">
+        <button>Dismiss!</button>
+    </div>
+</div>
+</body>
+</html>
